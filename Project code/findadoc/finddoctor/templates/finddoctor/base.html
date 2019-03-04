@@ -23,14 +23,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/tracker/">Find a doc</a>
+            <a class="navbar-brand" href="/finddoctor/">Find a doc</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             {% if user.is_authenticated %}
             <ul class="nav navbar-nav">
-                <li class=""><a href="/tracker/progress">About <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="/finddoctor/progress">About <span class="sr-only">(current)</span></a></li>
                 <li class=""><a href="#">Search<span class="sr-only"></span></a></li>
                 <li class=""><a href="#">TBA<span class="sr-only"></span></a></li>
             </ul>
@@ -41,13 +41,13 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/tracker/register">Register</a></li>
-                <li><a href="/tracker/logout">Logout</a></li>
+                <li><a href="/finddoctor/register">Register</a></li>
+                <li><a href="/finddoctor/logout">Logout</a></li>
             </ul>
             {% else %}
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/tracker/register">Register</a></li>
-                <li><a href="/tracker/logout">Logout</a></li>
+                <li><a href="/finddoctor/register">Register</a></li>
+                <li><a href="/finddoctor/logout">Logout</a></li>
             </ul>
             {% endif %}
         </div><!-- /.navbar-collapse -->
