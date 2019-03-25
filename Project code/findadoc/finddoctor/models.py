@@ -23,9 +23,32 @@ class UserProfile(models.Model):
         super(UserProfile, self).save()
 """
 
-    
+class Doctor(UserProfile):
+
+    def __str__(self):
+        return self.user.username
+
 
 def create_profile(sender, **kwargs):
 	if kwargs['created']:
 		user_profile = UserProfile.objects.create(user=kwargs['instance'])
 		post_save.connect(create_profile, sender=User)
+
+class Disease(models.Model):
+    name = models.CharField(max_length=50)
+    detail = models.CharField(max_length=50)
+    category = models.CharField(max_length=50)
+    Doctor = models.ManyToManyField(Doctor, blank=True)
+
+    def __str__(self):
+        return self.name
+
+class Symptom(models.Model):
+    name = models.CharField(max_length=50)
+    detail = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+class Apponiment():
+    pass
