@@ -1,0 +1,9 @@
+{% extends 'finddoctor/base.html' %}
+
+{% block body %}	
+		<ul>
+			{% for disease in object_list %} <!-- object_list is built in-->
+			<li><a href="#">{{disease.name}}</a></li>
+			{% endfor %}
+		</ul>
+{% endblock %}

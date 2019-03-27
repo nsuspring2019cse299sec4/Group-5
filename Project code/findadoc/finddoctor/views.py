@@ -1,5 +1,11 @@
+from django.contrib import messages
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import CreateView
+from django.views import generic
+from .models import Disease
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 # Create your views here.
 
@@ -17,3 +23,9 @@ def register(request):
         form = UserCreationForm()
 
     return render(request, 'finddoctor/register.html', {'form': form})
+
+class DiseaseView(generic.ListView):
+	template_name = 'finddoctor/disease.html'
+
+	def get_queryset(self):
+		return Disease.objects.all()
