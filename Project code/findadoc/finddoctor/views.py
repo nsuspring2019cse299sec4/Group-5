@@ -29,3 +29,10 @@ class DiseaseView(generic.ListView):
 
 	def get_queryset(self):
 		return Disease.objects.all()
+
+class TreatmentView(generic.DetailView):
+	model = Disease
+	template_name = 'finddoctor/treatment.html'
+
+	def get_queryset(self):
+		return Disease.objects.all()

@@ -38,6 +38,7 @@ class Disease(models.Model):
     name = models.CharField(max_length=50)
     detail = models.CharField(max_length=50)
     category = models.CharField(max_length=50)
+    treatment = models.CharField(max_length=100, default='Test')
     Doctor = models.ManyToManyField(Doctor, blank=True)
 
     def __str__(self):

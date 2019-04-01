@@ -12,4 +12,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(next_page=reverse_lazy('finddoctor:login')), name="logout"),
     path('register/', views.register, name='register'),
     path('disease/', views.DiseaseView.as_view(), name='disease'),
+    path('<int:pk>/',views.TreatmentView.as_view(), name='treatment'),
 ]

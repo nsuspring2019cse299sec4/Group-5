@@ -3,7 +3,7 @@
 {% block body %}	
 		<ul>
 			{% for disease in object_list %} <!-- object_list is built in-->
-			<li><a href="#">{{disease.name}}</a></li>
+			<li><a href="{% url 'finddoctor:treatment' disease.id %}">{{disease.name}}</a></li>
 			{% endfor %}
 		</ul>
 {% endblock %}
