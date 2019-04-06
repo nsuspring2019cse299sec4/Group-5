@@ -2,4 +2,10 @@
 
 {% block body %}	
 		<h1>Cure : {{ disease.treatment }}</h1>
+		<ul>
+			{% for doctors in disease.doctors.all %} <!-- object_list is built in-->
+			<li>Bug Fix</li>
+			<!-- <li><a href="{% url 'finddoctor:doctor' doctors.id %}">Doctor: {{doctors.get_full_name}}</a></li> -->
+			{% endfor %}
+		</ul>
 {% endblock %}
