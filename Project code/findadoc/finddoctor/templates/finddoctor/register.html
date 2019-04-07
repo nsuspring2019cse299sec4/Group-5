@@ -11,6 +11,30 @@
                      box-sizing: border-box;
                       }
 
+                      .topnav {
+                        overflow: hidden;
+                        background-color: #333;
+                        }
+
+                       .topnav a {
+                        float: left;
+                        color: #f2f2f2;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                        font-size: 17px;
+                        }
+
+                        .topnav a:hover {
+                        background-color: #ddd;
+                        color: black;
+                        }
+
+                        .topnav a.active {
+                        background-color: #4CAF50;
+                        color: white;
+                        }
+
                       input[type=text], input[type=email], input[type=password] , input[type=date] , input[type=phoneNumber] {
                        width: 100%;
                        padding: 15px;
@@ -63,9 +87,16 @@
                         right: 0;
                         }
              </style>
+
+             <div class="topnav">
+            <a class="active" href="#home">Register</a>
+            <a href="#homepage">Home</a>
+            <a href="#login">LogIn</a>
+            <a href="#doctorpage">Doctor</a>
+            </div>
             <div class="container">
             <form class="form-horizontal" role="form">
-                <h2>Registration</h2>
+                <h2>Please fill up the registration form below</h2>
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">First Name</label>
                     <div class="col-sm-9">
