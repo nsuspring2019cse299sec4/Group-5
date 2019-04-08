@@ -6,7 +6,7 @@
       	<style>
 body {
   font-family: Times New Roman, sans-serif;
-  background-color: cadetblue;
+  background-color: white;
 }
 
                         .topnav {
@@ -33,6 +33,22 @@ body {
                         color: white;
                         }
 
+                        .btn {
+                        background-color: #809fff;
+                        border: none;
+                        color: black;
+                        padding: 16px 32px;
+                        text-align: center;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        transition: 0.3s;
+                        }
+
+                        .btn:hover {
+                        background-color: #002699;
+                        color: white;
+                        }
+
                         input[type=text], input[type=date], input[type=email] , input[type=password] {
                        width: 100%;
                        padding: 15px;
@@ -47,8 +63,6 @@ body {
                        outline: none;
                        }
             </style>
-
-      	    <h2>Set Up Your Appointment</h2>
 
             <div class="topnav">
             <a class="active" href="#doctor">Doctor</a>
@@ -88,9 +102,8 @@ body {
                         <input type="password" id="password" placeholder="Password" class="form-control">
                     </div>
                 </div>
-                
-
-                <button type="button" class="btn btn-primary btn-block">Set Appointment</button>
+            
+                <button class="btn">Set Up Appointment</button>
          
      </div>
   </form>
