@@ -38,7 +38,7 @@ class TreatmentView(generic.DetailView):
 		#return Disease.objects.all()
 
 class DoctorView(generic.DetailView):
-	model = Disease
+	model = Doctor
 	template_name = 'finddoctor/doctor.html'
 
 
