@@ -6,8 +6,26 @@
 	<title> title name</title>
 		<style>
 			body {
-				background-image: url("https://wallpaperplay.com/walls/full/9/5/e/13971.jpg");
+				background-image: url("https://wallpaperplay.com/walls/full/b/6/c/176850.jpg");
+				background-size: cover;
+ 				background-repeat: no-repeat;
 				}
+				button {
+					background-color: #ffffff00; /* black */
+					border: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					margin: 4px 2px;
+					cursor: pointer;
+				}
+				button {width: 90%;}
+				p.ex1 {
+ 					 margin-bottom: 250px;
+					}
 		</style>
 </head>
 	<body>
@@ -17,7 +35,7 @@
 					<h1 class="h1-responsive font-weight-bold mt-sm-5">Its time to find you a cure young one</h1>
 					<hr class="hr-light">                 
 					<ul>
-						<li><a class="btn btn-white" href="{% url 'finddoctor:disease' %}">Disease</a></li>
+					<button class="button button3"><li><a href="{% url 'finddoctor:disease' %}">Disease</a></li></button>
 					</ul>
 				</div>
 			</div>
@@ -25,3 +43,5 @@
 	</body>
 </html>
 {% endblock %}
+
+
