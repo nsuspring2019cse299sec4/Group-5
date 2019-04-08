@@ -23,19 +23,22 @@
 					cursor: pointer;
 				}
 				button {width: 90%;}
-				p.ex1 {
- 					 margin-bottom: 250px;
-					}
+				h1 {
+					color: #000000;
+				}
+				p.thicker {
+					font-weight: 1000;
+				}
 		</style>
 </head>
 	<body>
 		<div class="mask rgba-gradient align-items-center">
     		<div class="container-fluid">
 				<div class="row">
-					<h1 class="h1-responsive font-weight-bold mt-sm-5">Its time to find you a cure young one</h1>
+					<h1 class="thicker"><center>Its time to find you a cure young one</center></h1>
 					<hr class="hr-light">                 
 					<ul>
-					<button class="button button3"><li><a href="{% url 'finddoctor:disease' %}">Disease</a></li></button>
+					<button class="button button"><li><a href="{% url 'finddoctor:disease' %}">Disease</a></li></button>
 					</ul>
 				</div>
 			</div>
@@ -45,3 +48,4 @@
 {% endblock %}
 
 
+<p class="thicker">This is a paragraph.</p>
