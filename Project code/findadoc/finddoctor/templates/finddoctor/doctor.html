@@ -5,6 +5,7 @@
       	<h1>Doctor's Page</h1>
       	<style>
 body {
+  font-family: Times New Roman, sans-serif;
   background-color: cadetblue;
 }
 
@@ -31,7 +32,22 @@ body {
                         background-color: #4CAF50;
                         color: white;
                         }
-</style>
+
+                        input[type=text], input[type=date], input[type=email] , input[type=password] {
+                       width: 100%;
+                       padding: 15px;
+                       margin: 5px 0 22px 0;
+                       display: inline-block;
+                       border: none;
+                       background: lightblue;
+                       }
+
+                       input[type=text]:focus, input[type=date]:focus, input[type=email]:focus, input[type= password]:focus {
+                       background-color: white;
+                       outline: none;
+                       }
+            </style>
+
       	    <h2>Set Up Your Appointment</h2>
 
             <div class="topnav">
@@ -40,37 +56,43 @@ body {
             <a href="#login">LogIn</a>
             <a href="#register">Register</a>
             </div>
-  <form class="form-horizontal" action="/action_page.php">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Password:</label>
-      <div class="col-sm-10">          
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="Name">Name:</label>
-      <div class="col-sm-10">          
-        <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="date">Date of Appointment:</label>
-      <div class="col-sm-10">          
-        <input type="date" class="form-control" id="date" placeholder="Enter date of appointment" name="date">
-      </div>
-    </div>
-    
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </div>
+
+
+
+    <form class="form-horizontal" role="form">
+                <h2>Set Up Your Appointment</h2>
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="name" placeholder="Name" class="form-control" autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateOfAppointment" class="col-sm-3 control-label">Date of Appointment</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="dateOfAppointment" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email* </label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" placeholder="Email" class="form-control" name= "email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password*</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                
+
+                <button type="button" class="btn btn-primary btn-block">Set Appointment</button>
+         
+     </div>
   </form>
 
 
