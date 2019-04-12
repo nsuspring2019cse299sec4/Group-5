@@ -3,9 +3,10 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
 from django.views import generic
-from .models import Disease, Doctor
+from .models import Disease, Doctor, UserProfile
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -36,6 +37,10 @@ class TreatmentView(generic.DetailView):
 
 	#def get_queryset(self):
 		#return Disease.objects.all()
+
+def profile(request):
+	args = {'UserProfile': request.user}
+	return render(request, 'finddoctor/profile.html', args)
 
 class DoctorView(generic.DetailView):
 	model = Doctor
