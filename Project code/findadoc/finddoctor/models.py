@@ -9,6 +9,8 @@ class UserProfile(models.Model):
     email = models.CharField(max_length=50)
     first_name = models.CharField(max_length=50, null=True, blank=True)
     last_name = models.CharField(max_length=50, null=True, blank=True)
+    location = models.CharField(max_length=50, null=True, blank=True, default='Test')
+    address = models.CharField(max_length=50, null=True, blank=True, default='Test')
 
     def get_full_name(self):
         return self.first_name + " " + self.last_name
@@ -39,7 +41,7 @@ class Disease(models.Model):
     detail = models.CharField(max_length=50)
     category = models.CharField(max_length=50)
     treatment = models.CharField(max_length=100, default='Test')
-    doctors = models.ManyToManyField(Doctor, blank=True)
+    doctors = models.ManyToManyField(Doctor, blank=True, default='Test')
 
     def __str__(self):
         return self.name

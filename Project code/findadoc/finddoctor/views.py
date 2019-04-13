@@ -13,6 +13,9 @@ from django.contrib.auth.models import User
 def index(request):
 	return render(request, 'finddoctor/index.html')
 
+def about(request):
+	return render(request, 'finddoctor/about.html')
+
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -46,5 +49,7 @@ class DoctorView(generic.DetailView):
 	model = Doctor
 	template_name = 'finddoctor/doctor.html'
 
-
+class DoctorslistView(generic.DetailView):
+	model = Doctor
+	template_name = 'finddoctor/doctorslist.html'
 
