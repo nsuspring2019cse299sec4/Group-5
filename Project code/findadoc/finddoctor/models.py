@@ -11,7 +11,8 @@ class UserProfile(models.Model):
     last_name = models.CharField(max_length=50, null=True, blank=True)
     location = models.CharField(max_length=50, null=True, blank=True, default='Test')
     address = models.CharField(max_length=50, null=True, blank=True, default='Test')
-    phone = models.CharField(max_length=50, null=True, blank=True, default='Test')
+    phn = models.CharField(max_length=50, null=True, blank=True, default='Test')
+    #phone = models.CharField(max_length=50, null=True, blank=True, default='Test')
 
     def get_full_name(self):
         return self.first_name + " " + self.last_name
