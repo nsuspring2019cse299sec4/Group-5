@@ -15,10 +15,13 @@
       display: none; 
     }
   }  
+  .container {
+    padding: 80px 120px;
+  }
   </style>
 </head>
 <body>
-
+<div class="container-fluid">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -32,24 +35,24 @@
       <div class="item active">
         <img src="https://wallpaperplay.com/walls/full/7/7/2/176856.jpg" width="1200" height="700">
         <div class="carousel-caption">
-          <h3> </h3>
-          <p>  </p>
+          <h3> Find a doctor </h3>
+          <p> Search from our extensive database of doctors </p>
         </div>      
       </div>
 
       <div class="item">
         <img src="https://wallpaperplay.com/walls/full/2/4/b/176845.jpg" width="1200" height="700">
         <div class="carousel-caption">
-          <h3> </h3>
-          <p> </p>
+          <h3> Set Up Appointments </h3>
+          <p> Set up appointments on your preferred time with just a click </p>
         </div>      
       </div>
     
       <div class="item">
         <img src="https://wallpaperplay.com/walls/full/c/0/4/176853.jpg" width="1200" height="700">
         <div class="carousel-caption">
-          <h3>  </h3>
-          <p>  </p>
+          <h3> Find your cure </h3>
+          <p> Tell us your symptoms and we'll match you up with a cure and doctor!  </p>
         </div>      
       </div>
     </div>
@@ -62,6 +65,42 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+</div>
+
+<div class="container text-center">
+  <h3>Find A Doc</h3>
+  <p><em>Your go-to place for all medical problems</em></p>
+  <p> We are a web application who will help you to find a doctor appropriate for your specific condition</p>
+  <br>
+</div>
+
+<div class="container">
+  <h3 class="text-center">Contact Us</h3>
+  <p class="text-center"><em> Send us your suggestions </em></p>
+  <div class="row test">
+    <div class="col-md-4">
+      <p> Having issues? Let us know! We'll try to ensure your best experience! </p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Dhaka, Bangladesh</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +88 00983478 </p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: findadoc@gmail.com </p> 
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send Suggestions</button>
+        </div>
+      </div> 
+    </div>
+  </div>
 </div>
 
 </body>
