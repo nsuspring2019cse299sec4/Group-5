@@ -39,7 +39,9 @@
 					<h1 class="thicker"><center>Its time to find you a cure young one</center></h1>
 					<hr class="hr-light">                 
 					<ul>
-					<button class="button button"><li><a href="{% url 'finddoctor:disease' %}">Disease</a></li></button>
+					<button>
+					<input type="button" value="Disease" onclick="window.location.href='{% url 'finddoctor:disease' %}'" />
+					</button>
 					</ul>
 				</div>
 			</div>
@@ -50,3 +52,4 @@
 
 
 <p class="thicker">This is a paragraph.</p>
+<button class="button button"><li><a href="{% url 'finddoctor:disease' %}">Disease</a></li></button>
