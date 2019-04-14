@@ -1,0 +1,24 @@
+body{
+	background-image: url("https://wallpaperplay.com/walls/full/b/6/c/176850.jpg");
+	background-size: cover;
+		background-repeat: no-repeat;
+	}
+	button {
+		background-color: #ffffff00; /* black */
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+	}
+	button {width: 90%;}
+	h1 {
+		color: #000000;
+	}
+	p.thicker {
+		font-weight: 1000;
+	}
