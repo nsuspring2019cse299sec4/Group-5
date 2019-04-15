@@ -1,6 +1,18 @@
 {% extends 'finddoctor/base.html' %}
 
-{% block body %}	
+{% block body %}
+<html>
+<head>
+	<title> title name</title>
+		<style>
+			body {
+				background-image: url("https://wallpaperplay.com/walls/full/6/8/e/13981.jpg");
+				background-size: cover;
+ 				background-repeat: no-repeat;
+				}
+				</style>
+</head>
+</html>	
 		<ul>
 			{% for disease in object_list %} <!-- object_list is built in-->
 			<li><a href="{% url 'finddoctor:treatment' disease.id %}">Disease: {{disease.name}}</a></li>
