@@ -3,18 +3,18 @@
 {% block body %}
 
 <style>
+
   .carousel-inner img {
     width: 100%; 
+    height: 100%;
     margin: auto;
+    object-fit: contain; 
   }
   .carousel-caption h3 {
-    color: #fff !important;
+    color: black;
   }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; 
-    }
-  }  
+  
+  
   .container {
     padding: 80px 120px;
   }
@@ -36,28 +36,25 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox" style=" width:100%; height: 600px;">
       <div class="item active">
-        <img src="https://wallpaperplay.com/walls/full/7/7/2/176856.jpg" width="1200" height="700">
+        <img src="https://wallpaperplay.com/walls/full/e/7/f/13977.jpg" >
         <div class="carousel-caption">
-          <h3> Find a doctor </h3>
-          <p> Search from our extensive database of doctors </p>
-        </div>      
+          <h2> Search and find your doctor from our extensive database of doctors </h2>
+        </div>     
       </div>
 
       <div class="item">
-        <img src="https://wallpaperplay.com/walls/full/2/4/b/176845.jpg" width="1200" height="700">
+        <img src="https://wallpaperplay.com/walls/full/2/4/b/176845.jpg" >
         <div class="carousel-caption">
-          <h3> Set Up Appointments </h3>
-          <p> Set up appointments on your preferred time with just a click </p>
+          <h2> Set Up Appointments on your preferred time with just a click </h2>
         </div>      
       </div>
     
       <div class="item">
-        <img src="https://wallpaperplay.com/walls/full/c/0/4/176853.jpg" width="1200" height="700">
+        <img src="https://wallpaperplay.com/walls/full/c/0/4/176853.jpg" >
         <div class="carousel-caption">
-          <h3> Find your cure </h3>
-          <p> Tell us your symptoms and we'll match you up with a cure and doctor!  </p>
+          <h2> Tell us your symptoms and find your cure </h2>
         </div>      
       </div>
     </div>
