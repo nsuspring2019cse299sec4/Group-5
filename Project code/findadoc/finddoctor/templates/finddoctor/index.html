@@ -53,6 +53,23 @@
 <body>
 
 
+	<div class="bgimg-1 w3-display-container w3-opacity-min w3-center" id="home">              
+					<ul>
+						<div class="w3-opacity">
+                        <div class="w3-clear"></div>
+					    <header class="w3-center w3-margin-bottom">
+						<h1><b>Hii {{ user }}</b></h1>
+                        <p class= "thicker"><b>Its time to find you a cure young one</b></p>
+                        <p class="w3-padding-16"><btn class="w3-button w3-black" onclick="window.location.href='{% url 'finddoctor:disease' %}'">Disease</btn></p>
+                        </header>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+        </div>
+
+
         <div class="w3-content w3-container w3-padding-64" id="about">
              <h3 class="w3-center">ABOUT </h3>
                 <p class="w3-center"><em> Your go-to place for all medical problems </em></p>
