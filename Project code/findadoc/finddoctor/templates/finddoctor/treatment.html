@@ -45,30 +45,50 @@
 	</div>
 </div>
 
-
+<div class="container">
+	<h2>List of doctors for your condition:</h2>
+	<p> You will be able to make an appointment with the doctors that are mentioned in the lists.  </p>      
+	<div class="table-responsive">          
+	  	<table class="table table-striped">
+		    <thead>
+		        <tr>
+		        	<tr class="w3-hover-green">
+		        		<th>Doctors Name</th>    
+		        	</tr>
+		        </tr>
+			</thead>
+			<tbody>
+		  		<tr>
+		  			<td>
+						<ul class="w3-ul w3-border">
+						{% for doctors in disease.doctors.all %} <!-- object_list is built in-->
+						<li>
+							<button type="button" class="btn btn-primary btn-block" onclick="location.href='{% url 'finddoctor:doctor' doctors.id %}'">{{doctors.get_full_name}}</button>
+						</li>
+						{% endfor %}
+						</ul>
+				    </td>
+		        </tr>
+		    </tbody>
+	    </table>
+	</div>
+</div>
 </body>
-	<footer>
-		<div class="footer">
-			<div class="w3-xlarge w3-section">
-		  <p>
-		  	   <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-		  </p>
+
+<footer>
+	<div class="footer">
+		<div class="w3-xlarge w3-section">
+	  		<p>
+		  	    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+			    <i class="fa fa-instagram w3-hover-opacity"></i>
+			    <i class="fa fa-snapchat w3-hover-opacity"></i>
+			    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+			    <i class="fa fa-twitter w3-hover-opacity"></i>
+			    <i class="fa fa-linkedin w3-hover-opacity"></i>
+	 		</p>
 		</div>
-	</footer>
+	</div>
+</footer>
+
 </html>
 {% endblock %}
-
-
-
-
-
-    <div class="panel panel-danger">
-      <div class="panel-heading">Panel with panel-danger class</div>
-      <div class="panel-body"><h1>{{ disease.treatment }}</h1></div>
-    </div>
-		<h1>Cure : {{ disease.treatment }}</h1>
