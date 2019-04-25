@@ -10,13 +10,21 @@
 				background-size: cover;
  				background-repeat: no-repeat;
 				}
+			.block{
+				display: block;
+                width: 50%;
+                padding: 14px 28px;
+                font-size: 16px;
+                cursor: pointer;
+                text-align: center;
+			}
 				
 </style>
 </head>
 </html>	
-		<ul>
+		<ul style="list-style-type:none;">
 			{% for disease in object_list %} <!-- object_list is built in-->
-			<li><button type="button" onclick="location.href='{% url 'finddoctor:treatment' disease.id %}'">Disease: {{disease.name}}</button></li>
+			<li><button type="button" class="block" onclick="location.href='{% url 'finddoctor:treatment' disease.id %}'">Disease: {{disease.name}}</button></li>
 			{% endfor %}
 		</ul>
 {% endblock %}
