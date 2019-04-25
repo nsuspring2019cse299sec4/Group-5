@@ -1,11 +1,54 @@
 {% extends 'finddoctor/base.html' %}
 
 {% block body %}	
-		<h1>Cure : {{ disease.treatment }}</h1>
-		<h2>List of doctors for your condition:</h2>
-		<ul>
-			{% for doctors in disease.doctors.all %} <!-- object_list is built in-->
-			<li><a href="{% url 'finddoctor:doctor' doctors.id %}">Doctor:{{doctors.get_full_name}}</a></li>
-			{% endfor %}
-		</ul>
+<html>
+<style>
+
+	.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<body>
+<div class="container">
+<h2>Remedy For Your Disease</h2>
+	<div class="table-responsive">          
+	  	<table class="table table-striped">
+		    <thead>
+		        <tr>
+		        	<tr class="w3-hover-red">
+		        	<th>Cure</th>    
+		        </tr>
+			</thead>
+				<tbody>
+			  		<tr>
+				  		<td>
+							<h1>{{ disease.treatment }}</h1>
+						</td>
+			        </tr>
+			    </tbody>
+	    </table>
+	</div>
+</div>
+
+
+</body>
+
+</html>
 {% endblock %}
+
+
+
+
+
+    <div class="panel panel-danger">
+      <div class="panel-heading">Panel with panel-danger class</div>
+      <div class="panel-body"><h1>{{ disease.treatment }}</h1></div>
+    </div>
+		<h1>Cure : {{ disease.treatment }}</h1>
