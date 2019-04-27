@@ -128,6 +128,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/findadoc/Group-5/Project code/findadoc/static'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 LOGIN_REDIRECT_URL = '/finddoctor/'
