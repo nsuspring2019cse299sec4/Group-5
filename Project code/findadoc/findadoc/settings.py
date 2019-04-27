@@ -128,6 +128,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/findadoc/Group-5/static'
+STATIC_ROOT = '/home/findadoc/Group-5/Project code/findadoc/static'
 
 LOGIN_REDIRECT_URL = '/finddoctor/'
