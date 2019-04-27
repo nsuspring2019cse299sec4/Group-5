@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, Doctor, Disease, Symptom, Apponiment
+from .models import UserProfile, Doctor, Disease, Symptom, Appoinment
 # Register your models here.
 
 admin.site.site_header = "FindAdoc Admin Portal"
@@ -9,5 +9,5 @@ admin.site.register(UserProfile)
 admin.site.register(Doctor)
 admin.site.register(Disease)
 admin.site.register(Symptom)
-admin.site.register(Apponiment)
+admin.site.register(Appoinment)
 

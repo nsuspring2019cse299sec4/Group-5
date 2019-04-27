@@ -7,6 +7,7 @@ from .models import Disease, Doctor, UserProfile
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
+from .forms import AppoinmentForm
 
 # Create your views here.
 
@@ -48,7 +49,11 @@ def profile(request):
 class DoctorView(generic.DetailView):
 	model = Doctor
 	template_name = 'finddoctor/doctor.html'
-
+"""
+	def get(self, request, pk):
+		form = AppoinmentForm()
+		return render(request, self.template_name, {'form':form})
+"""
 class DoctorslistView(generic.DetailView):
 	model = Doctor
 	template_name = 'finddoctor/doctorslist.html'
