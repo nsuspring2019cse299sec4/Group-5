@@ -38,6 +38,10 @@ def create_profile(sender, **kwargs):
 		user_profile = UserProfile.objects.create(user=kwargs['instance'])
 		post_save.connect(create_profile, sender=User)
 
+class Apponiment(models.Model):
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, default='Test')
+    time = models.CharField(max_length=50, default='Test')
+
 class Disease(models.Model):
     name = models.CharField(max_length=50)
     detail = models.CharField(max_length=50)
@@ -55,5 +59,4 @@ class Symptom(models.Model):
     def __str__(self):
         return self.name
 
-class Apponiment():
-    pass
+
