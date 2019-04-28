@@ -42,7 +42,7 @@ class Appoinment(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     phn = models.CharField(max_length=50, null=True, blank=True)
-    time = models.CharField(max_length=50)
+    time = models.CharField(max_length=50, default='Add a preferred time')
 
 class Disease(models.Model):
     name = models.CharField(max_length=50)
