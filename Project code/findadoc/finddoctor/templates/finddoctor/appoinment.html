@@ -23,12 +23,16 @@
 </head>
 </html>	
 		<div type="A" style="font-weight: bold; text-align:center;">
-		<head>List of Appoinments</head>
+		<head> Your List of Appoinments {{ user.username }}</head>
 		</div>
 		<br>
 		<ul type="A" style="font-weight: bold;">
+			<!--{% if user %}-->
 			{% for appoinment in object_list %} <!-- object_list is built in-->
-			<li>Appoinment: {{appoinment.name}}</li>
+			{% if user.username == appoinment.doctor.first_name %}
+			<li>Patients Name : {{appoinment.name}} <&nbsp> Number : {{appoinment.phn}} <&nbsp>  Preferred time : {{appoinment.time}}</li>
+			{% endif %}
 			{% endfor %}
+			<!--{% endif %}-->
 		</ul>
 {% endblock %}
