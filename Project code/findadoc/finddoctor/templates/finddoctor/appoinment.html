@@ -1,0 +1,34 @@
+{% extends 'finddoctor/base.html' %}
+
+{% block body %}
+<html>
+<head>
+	<title>List of Appoinments</title>
+		<style>
+			body {
+				background-image: url("https://wallpaperplay.com/walls/full/a/6/1/102460.jpg");
+				background-size: cover;
+ 				background-repeat: no-repeat;
+				}
+			.block{
+				display: block;
+                width: 50%;
+                padding: 14px 28px;
+                font-size: 16px;
+                cursor: pointer;
+                text-align: center;
+			}
+				
+</style>
+</head>
+</html>	
+		<div type="A" style="font-weight: bold; text-align:center;">
+		<head>List of Appoinments</head>
+		</div>
+		<br>
+		<ul type="A" style="font-weight: bold;">
+			{% for appoinment in object_list %} <!-- object_list is built in-->
+			<li>Appoinment: {{appoinment.name}}</li>
+			{% endfor %}
+		</ul>
+{% endblock %}

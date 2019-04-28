@@ -3,7 +3,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
 from django.views import generic
-from .models import Disease, Doctor, UserProfile
+from .models import Disease, Doctor, UserProfile, Appoinment
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.models import User
@@ -54,7 +54,8 @@ class DoctorView(generic.DetailView):
 		form = AppoinmentForm()
 		return render(request, self.template_name, {'form':form})
 """
-class DoctorslistView(generic.DetailView):
-	model = Doctor
-	template_name = 'finddoctor/doctorslist.html'
+class AppoinmentlistView(generic.ListView):
+	template_name = 'finddoctor/appoinment.html'
 
+	def get_queryset(self):
+		return Appoinment.objects.all()

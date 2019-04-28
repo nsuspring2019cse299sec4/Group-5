@@ -38,7 +38,7 @@
             {% if user.is_authenticated %}
             <ul class="nav navbar-nav">
                 <li class=""><a href="/finddoctor/about">About <span class="sr-only"></span></a></li>
-                <li class=""><a href="/finddoctor/doctorslist">Doctors List <span class="sr-only"></span></a></li>
+                <li class=""><a href="{% url 'finddoctor:appoinmentlist' %}">Appoinment List <span class="sr-only"></span></a></li>
                 <li class=""><a href="/finddoctor/profile">User Profile<span class="sr-only"></span></a></li>
             </ul>
             <form class="navbar-form navbar-left">

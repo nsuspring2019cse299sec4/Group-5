@@ -16,5 +16,5 @@ urlpatterns = [
     path('doctor/<int:pk>/',views.DoctorView.as_view(), name='doctor'),
     path('profile/', views.profile, name='profile'),
     path('about/', views.about, name='index'),
-    path('doctorslist/', views.DoctorslistView.as_view(), name='doctorslist'),
+    path('appoinmentlist/', views.AppoinmentlistView.as_view(), name='appoinmentlist'),
 ]
