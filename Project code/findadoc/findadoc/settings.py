@@ -25,7 +25,7 @@ SECRET_KEY = 'f@_*iqb#vefg^lxdpu7i0vc#s*kf3t%mv-$j1#j8w80z-!0v-7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['findadoc.pythonanywhere.com']
+ALLOWED_HOSTS = ['findadoc.pythonanywhere.com'] 
 
 
 # Application definition
