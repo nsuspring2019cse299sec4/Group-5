@@ -10,21 +10,45 @@
 				background-size: cover;
  				background-repeat: no-repeat;
 				}
-			.block{
-				display: block;
-                width: 50%;
-                padding: 14px 28px;
-                font-size: 16px;
-                cursor: pointer;
-                text-align: center;
+			.btn {
+				border: 4px solid #555555;
+				transition-duration: 0.4s;
+				background-color: blue-grey;
+			}
+			.btn:hover {
+				background-color: #e7e7e7;
 			}
 				
 </style>
 </head>
 </html>	
-		<ul style="list-style-type:none;">
-			{% for disease in object_list %} <!-- object_list is built in-->
-			<li><button type="button" class="block" onclick="location.href='{% url 'finddoctor:treatment' disease.id %}'">Disease: {{disease.name}}</button></li>
-			{% endfor %}
-		</ul>
+        <div class="container">    
+	<div class="table-responsive">          
+	  	<table class="table table-condensed">
+		    <thead>
+		        <tr>
+		        	<tr class="w3-blue-grey w3-hover-grey">
+		        		<th style='text-align:center'>Disease</th>    
+		        	</tr>
+		        </tr>
+			</thead>
+			<tbody>
+		  		<tr>
+		  			<td>
+						<ul class="w3-ul w3-border">
+						{% for disease in object_list %} <!-- object_list is built in-->
+						<li>
+							<button type="button" class="btn btn-block" onclick="location.href='{% url 'finddoctor:treatment' disease.id %}'">Disease: {{disease.name}}</button>
+						</li>
+						{% endfor %}
+						</ul>
+				    </td>
+		        </tr>
+		    </tbody>
+	    </table>
+	</div>
+</div>
+
+
+		
 {% endblock %}
