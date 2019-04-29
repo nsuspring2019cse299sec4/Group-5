@@ -13,3 +13,9 @@ set up an appointment. The days of being lost and asking people what to do when 
 Just Login-in choose the symptom which best fits your condition and the site will present you with a list of 
 doctors closest to your location with their profile and all the appropriate information, and then you can set 
 up an appointment with a doctor of your choice. 
+
+1) Github Project link: https://github.com/nsuspring2019cse299sec4/Group-5
+
+2) Trello Board Link: https://trello.com/b/Yp0KdI4d/findadoc
+
+3) Slack Channel Link: https://cse299section4-group5.slack.com/
